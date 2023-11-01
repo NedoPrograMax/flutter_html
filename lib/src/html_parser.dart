@@ -88,7 +88,9 @@ class HtmlParser extends StatefulWidget {
           if (anchorContext != null) {
             Scrollable.ensureVisible(anchorContext);
           }
-          return;
+
+          /// hide return because want the callback to be called every time
+          //  return;
         }
         onLinkTap?.call(url, attributes, element);
       };
